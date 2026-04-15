@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisem Directory - List View</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ==================== TOP BAR ==================== -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <span>WELCOME TO THE WISEM LISTINGS</span>
+                <div class="d-flex align-items-center">
+                    <a href="login.html">LOGIN</a>
+                    <span class="separator">|</span>
+                    <a href="register.html">REGISTER</a>
+                    <div class="currency-selector ms-4">
+                        <span class="active">$ USD</span>
+                        <span>€ EUR</span>
+                        <span>£ GBP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="navbar navbar-expand-lg main-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-globe"></i> WISEM DIRECTORY
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars text-white"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+                <ul class="navbar-nav align-items-lg-center">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">HOME</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.html">Home Default</a></li>
+                            <li><a class="dropdown-item" href="#">Home Map View</a></li>
+                            <li><a class="dropdown-item" href="#">Home Slider</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">ABOUT US</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">About Us</a></li>
+                            <li><a class="dropdown-item" href="#">Our Team</a></li>
+                            <li><a class="dropdown-item" href="#">Testimonials</a></li>
+                            <li><a class="dropdown-item" href="#">FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">CATEGORIES</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">All Categories</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Accommodation</a></li>
+                            <li><a class="dropdown-item" href="#">Business Services</a></li>
+                            <li><a class="dropdown-item" href="#">Education &amp; Learning</a></li>
+                            <li><a class="dropdown-item" href="#">Automotive</a></li>
+                            <li><a class="dropdown-item" href="#">Fitness &amp; Health</a></li>
+                            <li><a class="dropdown-item" href="#">Technology</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">PAGES</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.html">Listings Grid</a></li>
+                            <li><a class="dropdown-item" href="listings-list.html">Listings List</a></li>
+                            <li><a class="dropdown-item" href="listing-detail.html">Listing Detail</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="login.html">Login</a></li>
+                            <li><a class="dropdown-item" href="register.html">Register</a></li>
+                            <li><a class="dropdown-item" href="404.html">404 Page</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">BLOG</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CONTACT</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-submit-listing" href="#"><i class="fas fa-plus me-1"></i> SUBMIT LISTING</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+        <!-- ==================== PAGE BANNER ==================== -->
+    <section class="page-banner">
+        <div class="page-banner-overlay">
+            <div class="container text-center">
+                <h1>Listing Detail</h1>
+                <p class="breadcrumb-text"><a href="index.html">Home</a> / <a href="index.html">Listings</a> / Ridenow Sports</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ==================== LISTING HEADER ==================== -->
+    <div class="listing-header">
+        <h3>BUSINESS SERVICES \ INSURANCE <span>[37]</span></h3>
+    </div>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <div class="container pb-5">
+        <div class="row">
+            <!-- ===== SIDEBAR ===== -->
+            <div class="col-lg-3 mb-4 anim fade-left">
+                <!-- Results bar (above sidebar on mobile) -->
+                <div class="results-bar d-lg-none">
+                    <div class="result-count">Your search returned <strong>37</strong> results</div>
+                </div>
+                <ul class="sidebar-categories">
+                    <li><a href="#" class="cat-all active"><i class="fas fa-th-large"></i> All Categories</a></li>
+                    <li><a href="#" class="cat-accommodation"><i class="fas fa-bed"></i> Accommodation</a></li>
+                    <li><a href="#" class="cat-business"><i class="fas fa-briefcase"></i> Business Services</a></li>
+                    <li><a href="#" class="cat-education"><i class="fas fa-graduation-cap"></i> Education & Learning</a></li>
+                    <li><a href="#" class="cat-references"><i class="fas fa-bookmark"></i> References</a></li>
+                    <li><a href="#" class="cat-automotive"><i class="fas fa-car"></i> Automotive</a></li>
+                    <li><a href="#" class="cat-fitness"><i class="fas fa-heartbeat"></i> Fitness & Health</a></li>
+                    <li><a href="#" class="cat-sports"><i class="fas fa-futbol"></i> Sports & Adventure</a></li>
+                    <li><a href="#" class="cat-regional"><i class="fas fa-map-marker-alt"></i> Regional</a></li>
+                    <li><a href="#" class="cat-hotels"><i class="fas fa-plane"></i> Hotels & Travel</a></li>
+                    <li><a href="#" class="cat-technology"><i class="fas fa-microchip"></i> Technology</a></li>
+                </ul>
+            </div>
+
+            <!-- ===== LISTINGS (LIST VIEW) ===== -->
+            <div class="col-lg-9 anim fade-right anim-d2">
+                <!-- Results bar -->
+                <div class="results-bar d-none d-lg-flex">
+                    <div class="result-count">Your search returned <strong>37</strong> results</div>
+                    <div class="d-flex align-items-center gap-2">
+                        <select class="sort-select">
+                            <option>SORT RESULTS BY</option>
+                            <option>Newest</option>
+                            <option>Oldest</option>
+                            <option>A-Z</option>
+                            <option>Z-A</option>
+                        </select>
+                        <div class="view-options btn-group">
+                            <a href="index.html" class="btn"><i class="fas fa-th"></i></a>
+                            <button class="btn active"><i class="fas fa-list"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LIST ITEMS -->
+                <div class="listing-list-view">
+
+                    <!-- Item 1 -->
+                    <a href="listing-detail.html" class="listing-list-item-link">
+                        <div class="listing-list-item">
+                            <div class="listing-list-img">
+                                <img src="img/placeholder.png" alt="Listing">
+                            </div>
+                            <div class="listing-list-content">
+                                <div class="listing-list-category cat-automotive">AUTOMOTIVE</div>
+                                <h5 class="listing-list-title">RIDENOW SPORTS</h5>
+                                <p class="listing-list-address">
+                                    17202 N Cave Creek Rd, Phoenix, AZ 85032
+                                    <span class="listing-list-phone"><i class="fas fa-phone-alt"></i> (480) 998-6800</span>
+                                </p>
+                                <p class="listing-list-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Item 2 -->
+                    <a href="listing-detail.html" class="listing-list-item-link">
+                        <div class="listing-list-item">
+                            <div class="listing-list-img">
+                                <img src="img/placeholder.png" alt="Listing">
+                                <span class="badge-featured">FEATURED</span>
+                            </div>
+                            <div class="listing-list-content">
+                                <div class="listing-list-category cat-beauty">BEAUTY & SPA</div>
+                                <h5 class="listing-list-title">AMICUS HAIR AND BEAUTY</h5>
+                                <p class="listing-list-address">
+                                    5198 Macarthur Blvd NW Unit B, Washington, DC 20016
+                                    <span class="listing-list-phone"><i class="fas fa-phone-alt"></i> (202) 362-1020</span>
+                                </p>
+                                <p class="listing-list-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Item 3 -->
+                    <a href="listing-detail.html" class="listing-list-item-link">
+                        <div class="listing-list-item">
+                            <div class="listing-list-img">
+                                <img src="img/placeholder.png" alt="Listing">
+                                <span class="badge-featured">FEATURED</span>
+                            </div>
+                            <div class="listing-list-content">
+                                <div class="listing-list-category cat-entertainment">ENTERTAINMENT</div>
+                                <h5 class="listing-list-title">BLUE ROOM CINEBAR</h5>
+                                <p class="listing-list-address">
+                                    2306 Almaden Road, San Jose, CA 95125
+                                    <span class="listing-list-phone"><i class="fas fa-phone-alt"></i> (408) 269-2060</span>
+                                </p>
+                                <p class="listing-list-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Item 4 -->
+                    <a href="listing-detail.html" class="listing-list-item-link">
+                        <div class="listing-list-item">
+                            <div class="listing-list-img">
+                                <img src="img/placeholder.png" alt="Listing">
+                            </div>
+                            <div class="listing-list-content">
+                                <div class="listing-list-category cat-music">MUSIC</div>
+                                <h5 class="listing-list-title">ZOOM MELODEY</h5>
+                                <p class="listing-list-address">
+                                    2306 Almaden Road, San Jose, CA 95125
+                                    <span class="listing-list-phone"><i class="fas fa-phone-alt"></i> (408) 555-1234</span>
+                                </p>
+                                <p class="listing-list-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Item 5 -->
+                    <a href="listing-detail.html" class="listing-list-item-link">
+                        <div class="listing-list-item">
+                            <div class="listing-list-img">
+                                <img src="img/placeholder.png" alt="Listing">
+                                <span class="badge-featured">FEATURED</span>
+                            </div>
+                            <div class="listing-list-content">
+                                <div class="listing-list-category cat-travel">TRAVEL</div>
+                                <h5 class="listing-list-title">SKYWARE JOURNEY</h5>
+                                <p class="listing-list-address">
+                                    5198 Macarthur Blvd NW Unit B, Washington, DC 20016
+                                    <span class="listing-list-phone"><i class="fas fa-phone-alt"></i> (202) 555-9876</span>
+                                </p>
+                                <p class="listing-list-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Item 6 -->
+                    <a href="listing-detail.html" class="listing-list-item-link">
+                        <div class="listing-list-item">
+                            <div class="listing-list-img">
+                                <img src="img/placeholder.png" alt="Listing">
+                            </div>
+                            <div class="listing-list-content">
+                                <div class="listing-list-category cat-education">EDUCATION</div>
+                                <h5 class="listing-list-title">SAM TUTOR CENTER</h5>
+                                <p class="listing-list-address">
+                                    17202 N Cave Creek Rd, Phoenix, AZ 85032
+                                    <span class="listing-list-phone"><i class="fas fa-phone-alt"></i> (480) 555-4567</span>
+                                </p>
+                                <p class="listing-list-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Item 7 -->
+                    <a href="listing-detail.html" class="listing-list-item-link">
+                        <div class="listing-list-item">
+                            <div class="listing-list-img">
+                                <img src="img/placeholder.png" alt="Listing">
+                            </div>
+                            <div class="listing-list-content">
+                                <div class="listing-list-category cat-business">BUSINESS</div>
+                                <h5 class="listing-list-title">ASSOCIATE INC.</h5>
+                                <p class="listing-list-address">
+                                    17202 N Cave Creek Rd, Phoenix, AZ 85032
+                                    <span class="listing-list-phone"><i class="fas fa-phone-alt"></i> (480) 555-7890</span>
+                                </p>
+                                <p class="listing-list-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Item 8 -->
+                    <a href="listing-detail.html" class="listing-list-item-link">
+                        <div class="listing-list-item">
+                            <div class="listing-list-img">
+                                <img src="img/placeholder.png" alt="Listing">
+                            </div>
+                            <div class="listing-list-content">
+                                <div class="listing-list-category cat-technology">TECHNOLOGY</div>
+                                <h5 class="listing-list-title">ALITAY TECHNOLOGIES</h5>
+                                <p class="listing-list-address">
+                                    5198 Macarthur Blvd NW Unit B, Washington, DC 20016
+                                    <span class="listing-list-phone"><i class="fas fa-phone-alt"></i> (202) 555-3456</span>
+                                </p>
+                                <p class="listing-list-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Item 9 -->
+                    <a href="listing-detail.html" class="listing-list-item-link">
+                        <div class="listing-list-item">
+                            <div class="listing-list-img">
+                                <img src="img/placeholder.png" alt="Listing">
+                            </div>
+                            <div class="listing-list-content">
+                                <div class="listing-list-category cat-woman">WOMAN</div>
+                                <h5 class="listing-list-title">GHESPOKE WEAR</h5>
+                                <p class="listing-list-address">
+                                    2306 Almaden Road, San Jose, CA 95125
+                                    <span class="listing-list-phone"><i class="fas fa-phone-alt"></i> (408) 555-6789</span>
+                                </p>
+                                <p class="listing-list-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+                <!-- LOAD MORE -->
+                <div class="text-center mt-3 mb-4">
+                    <button class="btn-load-more" id="loadMoreBtn">LOAD MORE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="site-footer anim fade-up">
+        <div class="container">
+            <div class="row">
+                <!-- About -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5>About Wisem</h5>
+                    <div class="footer-brand">
+                        <i class="fas fa-globe"></i>
+                        <span>WISEM DIRECTORY</span>
+                    </div>
+                    <p>Integer ac lorem id amet est rhoncus dapi bus dui. Sed pede eos lorem elit mis ruto mattis ut ultrics eu euismod lorem ut dictum mi metus. Nullam tempus erat id fort in het habitasse platea dictumst.</p>
+                    <a href="#" class="btn btn-read-more">Read More</a>
+                </div>
+
+                <!-- Main Categories -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5>Main Categories</h5>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="footer-categories-list">
+                                <li><a href="#"><i class="fas fa-chevron-right"></i> Automotive</a></li>
+                                <li><a href="#"><i class="fas fa-chevron-right"></i> Humanities</a></li>
+                                <li><a href="#"><i class="fas fa-chevron-right"></i> Computers</a></li>
+                                <li><a href="#"><i class="fas fa-chevron-right"></i> Education</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="footer-categories-list">
+                                <li><a href="#"><i class="fas fa-chevron-right"></i> Internet Services</a></li>
+                                <li><a href="#"><i class="fas fa-chevron-right"></i> Marketing</a></li>
+                                <li><a href="#"><i class="fas fa-chevron-right"></i> Technology</a></li>
+                                <li><a href="#"><i class="fas fa-chevron-right"></i> Health / Fitness</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Get In Touch -->
+                <div class="col-lg-4 col-md-12 mb-4 footer-contact">
+                    <h5>Get In Touch</h5>
+                    <h6>WISEM DIRECTORY INC.</h6>
+                    <p class="mb-2">Suite # 36, Fireworks Hill, Victoria, WA 12348</p>
+                    <a href="#" style="color: var(--accent-yellow); font-size: 0.8rem; text-decoration: none;">Get In Map</a>
+                    <ul class="contact-info mt-3">
+                        <li><span class="label">Tele:</span> (123) 456 7890</li>
+                        <li><span class="label">Toll Free:</span> (1) 002 123 9876 5</li>
+                        <li><span class="label">Email:</span> <a href="mailto:support@wisemdirectory.com">support@wisemdirectory.com</a></li>
+                        <li><span class="label">Fax:</span> (123) 456 7891</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                    <div>
+                        &copy; 2016 WISEM DIRECTORY - ALL RIGHTS RESERVED. <a href="#">PRIVACY POLICY</a>
+                    </div>
+                    <div class="footer-social mt-2 mt-md-0">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-vimeo-v"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fas fa-rss"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Currency selector
+        document.querySelectorAll('.currency-selector span').forEach(span => {
+            span.addEventListener('click', function() {
+                document.querySelectorAll('.currency-selector span').forEach(s => s.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Sidebar category click
+        document.querySelectorAll('.sidebar-categories li a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.sidebar-categories li a').forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
